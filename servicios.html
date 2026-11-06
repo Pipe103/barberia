@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios, Tarifas y Reservas | La Gran Batalla Barber</title>
+    <meta name="description" content="Catálogo interactivo de servicios, selección de barberos y motor de reservas online con confirmación automática por WhatsApp.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        barberDark: '#121212',
+                        barberCard: '#1E1E1E',
+                        barberGold: '#D4AF37',
+                        barberGoldHover: '#C5A028',
+                        barberGray: '#8A8A8A'
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-barberDark text-white font-sans antialiased selection:bg-barberGold selection:text-black">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-barberDark/90 backdrop-blur-md border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-barberGold flex items-center justify-center text-black font-extrabold text-xl group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-wider uppercase">La Gran Batalla</span>
+                    <span class="text-xs text-barberGold tracking-widest font-medium">BARBER SHOP</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Nosotros</a>
+                <a href="servicios.html" class="text-barberGold font-semibold text-sm transition-colors">Servicios & Tarifas</a>
+                <a href="proyectos.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Portafolio</a>
+                <a href="contacto.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Ubicación y Contacto</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#reservas" class="bg-barberGold hover:bg-barberGoldHover text-black font-bold px-5 py-2.5 rounded-full text-sm transition-all shadow-lg shadow-barberGold/20 hover:scale-105">
+                    Reservar Turno
+                </a>
+            </div>
+            <button id="menu-btn" aria-label="Abrir menú" class="md:hidden text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-barberCard border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Inicio</a>
+            <a href="nosotros.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Nosotros</a>
+            <a href="servicios.html" class="block text-barberGold font-medium py-2 border-b border-white/5">Servicios & Tarifas</a>
+            <a href="proyectos.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Portafolio</a>
+            <a href="contacto.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Ubicación y Contacto</a>
+            <div class="pt-2"><a href="#reservas" class="block w-full text-center bg-barberGold text-black font-bold py-3 rounded-full text-sm">Reservar Turno</a></div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-barberDark via-[#1A1A1A] to-barberDark border-b border-white/10 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <span class="text-barberGold text-xs font-bold tracking-widest uppercase bg-barberGold/10 border border-barberGold/30 px-3 py-1 rounded-full">Catálogo Interactivo</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold">Servicios & Tarifas</h1>
+            <p class="text-gray-400 text-base max-w-2xl mx-auto">Selecciona tu tratamiento preferido y agenda tu turno en tiempo real sin intermediarios.</p>
+        </div>
+    </section>
+
+    <!-- Services Catalog Grid -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <!-- Service 1 -->
+            <div class="bg-barberCard border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-barberGold/50 transition-all">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl bg-barberGold/10 text-barberGold flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <span class="bg-barberGold/10 text-barberGold text-xs font-bold px-3 py-1 rounded-full">30 min</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Corte Clásico / Moderno</h3>
+                    <p class="text-gray-400 text-sm">Corte de cabello personalizado con técnica de tijera o máquina, lavado y acabado profesional.</p>
+                </div>
+                <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Tarifa sugerida</span>
+                        <span class="text-lg font-extrabold text-barberGold">$35.000 COP</span>
+                    </div>
+                    <button onclick="selectService('Corte Clásico / Moderno', 35000, 30)" class="bg-barberGold hover:bg-barberGoldHover text-black font-bold px-4 py-2 rounded-xl text-xs transition-all">
+                        Seleccionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-barberCard border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-barberGold/50 transition-all">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl bg-barberGold/10 text-barberGold flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-spray-can-sparkles"></i>
+                        </div>
+                        <span class="bg-barberGold/10 text-barberGold text-xs font-bold px-3 py-1 rounded-full">20 min</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Perfilado de Barba</h3>
+                    <p class="text-gray-400 text-sm">Diseño de barba con navaja, toallas calientes, aceites esenciales y bálsamo hidratante.</p>
+                </div>
+                <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Tarifa sugerida</span>
+                        <span class="text-lg font-extrabold text-barberGold">$25.000 COP</span>
+                    </div>
+                    <button onclick="selectService('Perfilado de Barba', 25000, 20)" class="bg-barberGold hover:bg-barberGoldHover text-black font-bold px-4 py-2 rounded-xl text-xs transition-all">
+                        Seleccionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-barberCard border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-barberGold/50 transition-all">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl bg-barberGold/10 text-barberGold flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <span class="bg-barberGold/10 text-barberGold text-xs font-bold px-3 py-1 rounded-full">50 min</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Combo Gran Batalla</h3>
+                    <p class="text-gray-400 text-sm">El servicio integral definitivo: Corte completo + Perfilado de barba con ritual de toallas calientes.</p>
+                </div>
+                <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Tarifa sugerida</span>
+                        <span class="text-lg font-extrabold text-barberGold">$55.000 COP</span>
+                    </div>
+                    <button onclick="selectService('Combo Gran Batalla', 55000, 50)" class="bg-barberGold hover:bg-barberGoldHover text-black font-bold px-4 py-2 rounded-xl text-xs transition-all">
+                        Seleccionar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Booking Engine -->
+        <div id="reservas" class="bg-barberCard border border-white/10 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-barberGold text-black font-bold text-xs px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider">
+                Motor Inteligente 24/7
+            </div>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-extrabold">Sistema de Reserva en Línea</h2>
+                    <p class="text-gray-400 text-sm">Completa los datos para asegurar tu turno sin solapamientos y activar tu confirmación instantánea vía WhatsApp.</p>
+                </div>
+
+                <form id="booking-form" onsubmit="handleBooking(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">1. Servicio Seleccionado</label>
+                            <input type="text" id="selected-service-input" value="Corte Clásico / Moderno (30 min)" readonly class="w-full bg-barberDark border border-white/10 rounded-xl px-4 py-3 text-barberGold font-bold text-sm focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">2. Selecciona tu Barbero</label>
+                            <select id="barber-select" class="w-full bg-barberDark border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barberGold">
+                                <option value="Carlos 'El Maestro'">Carlos "El Maestro" (Master Barber)</option>
+                                <option value="Santiago Gómez">Santiago Gómez (Fade & Style)</option>
+                                <option value="Andrés 'El Pro'">Andrés "El Pro" (Senior Stylist)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">3. Fecha de la Cita</label>
+                            <input type="date" id="booking-date" required class="w-full bg-barberDark border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barberGold">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">4. Horario Disponible</label>
+                            <select id="booking-time" required class="w-full bg-barberDark border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barberGold">
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                                <option value="05:00 PM">05:00 PM</option>
+                                <option value="06:00 PM">06:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">5. Nombre Completo</label>
+                            <input type="text" id="client-name" required placeholder="Ej. Juan Pérez" class="w-full bg-barberDark border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barberGold">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">6. Número de Celular (WhatsApp)</label>
+                            <input type="tel" id="client-phone" required placeholder="Ej. +57 300 123 4567" class="w-full bg-barberDark border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barberGold">
+                        </div>
+                    </div>
+
+                    <div class="bg-barberDark p-4 rounded-xl border border-white/5 flex items-center justify-between text-xs text-gray-400">
+                        <div>
+                            <span class="font-bold text-white block mb-0.5">Modalidad de Pago Offline (Preparada para Wompi / Bold)</span>
+                            Pago directo en el local (Efectivo, transferencia o datáfono) tras recibir tu recordatorio por WhatsApp.
+                        </div>
+                        <div class="text-barberGold font-bold text-base whitespace-nowrap ml-4" id="service-price-display">$35.000 COP</div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-barberGold hover:bg-barberGoldHover text-black font-extrabold py-4 rounded-xl text-base transition-all shadow-xl shadow-barberGold/20 hover:scale-[1.01]">
+                        Confirmar Reserva y Enviar Notificación WhatsApp
+                    </button>
+                </form>
+
+                <!-- Success Confirmation Box -->
+                <div id="booking-success" class="hidden bg-emerald-900/40 border border-emerald-500/50 p-6 rounded-2xl text-center space-y-4">
+                    <div class="w-16 h-16 bg-emerald-500 text-black rounded-full flex items-center justify-center text-3xl mx-auto font-bold">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-400">¡Reserva Registrada con Éxito!</h3>
+                    <p class="text-gray-300 text-sm max-w-lg mx-auto">
+                        Tu turno ha sido bloqueado en nuestro inventario en tiempo real. Se ha simulado el envío de la API de WhatsApp con los detalles de tu cita y los recordatorios programados.
+                    </p>
+                    <div id="success-details" class="bg-barberDark p-4 rounded-xl text-left text-xs font-mono text-barberGold space-y-1"></div>
+                    <button onclick="resetBooking()" class="bg-white/10 hover:bg-barberGold hover:text-black font-bold px-6 py-2 rounded-xl text-xs transition-all">
+                        Realizar otra reserva
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-barberDark border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-barberGold flex items-center justify-center text-black font-bold"><i class="fa-solid fa-scissors"></i></div>
+                    <span class="font-bold text-base tracking-wider uppercase">La Gran Batalla</span>
+                </div>
+                <p class="text-xs text-gray-400">Establecimiento enfocado en el cuidado masculino y estético de alta calidad en Itagüí, Colombia.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-barberGold">Inicio</a></li>
+                    <li><a href="nosotros.html" class="hover:text-barberGold">Nosotros</a></li>
+                    <li><a href="servicios.html" class="hover:text-barberGold">Servicios & Tarifas</a></li>
+                    <li><a href="contacto.html" class="hover:text-barberGold">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Ubicación</h4>
+                <p class="text-xs text-gray-400">Calle 31B # 45-62<br>Itagüí, Antioquia, Colombia</p>
+                <p class="text-xs text-barberGold mt-2 font-medium">+57 321 834 79 61</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Canales Digitales</h4>
+                <div class="flex space-x-4">
+                    <a href="https://instagram.com/lagranbatallabarber" target="_blank" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold"><i class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                    <a href="https://wa.me/573218347961" target="_blank" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5 pt-8 text-xs text-gray-500 text-center">
+            &copy; 2026 La Gran Batalla Barber. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        let currentPrice = 35000;
+        function selectService(name, price, duration) {
+            document.getElementById('selected-service-input').value = `${name} (${duration} min)`;
+            currentPrice = price;
+            document.getElementById('service-price-display').innerText = `${price.toLocaleString()} COP`;
+            document.getElementById('reservas').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            const service = document.getElementById('selected-service-input').value;
+            const barber = document.getElementById('barber-select').value;
+            const date = document.getElementById('booking-date').value;
+            const time = document.getElementById('booking-time').value;
+            const name = document.getElementById('client-name').value;
+            const phone = document.getElementById('client-phone').value;
+
+            const detailsHTML = `
+                <div>Cliente: ${name}</div>
+                <div>Celular: ${phone}</div>
+                <div>Servicio: ${service}</div>
+                <div>Barbero: ${barber}</div>
+                <div>Fecha/Hora: ${date} a las ${time}</div>
+                <div>Estado WhatsApp API: [JSON Enviado con Éxito - Recordatorio programado 2h antes]</div>
+            `;
+            document.getElementById('success-details').innerHTML = detailsHTML;
+            document.getElementById('booking-form').style.display = 'none';
+            document.getElementById('booking-success').classList.remove('hidden');
+        }
+
+        function resetBooking() {
+            document.getElementById('booking-form').reset();
+            document.getElementById('booking-form').style.display = 'block';
+            document.getElementById('booking-success').classList.add('hidden');
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

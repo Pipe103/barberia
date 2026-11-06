@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Gran Batalla Barber | Estilo Profesional y Reservas Digitales en Itagüí</title>
+    <meta name="description" content="Establecimiento de cuidado masculino y estético en Itagüí. Reserva tu turno online en segundos sin filas ni esperas. Estilo profesional a tu alcance.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="La Gran Batalla Barber">
+    <meta property="og:description" content="Estilo profesional a tu alcance: Reserva tu turno digital en segundos y domina tu tiempo.">
+    <meta property="og:type" content="website">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        barberDark: '#121212',
+                        barberCard: '#1E1E1E',
+                        barberGold: '#D4AF37',
+                        barberGoldHover: '#C5A028',
+                        barberGray: '#8A8A8A'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-barberDark text-white font-sans antialiased selection:bg-barberGold selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-barberDark/90 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-barberGold flex items-center justify-center text-black font-extrabold text-xl group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-wider uppercase">La Gran Batalla</span>
+                    <span class="text-xs text-barberGold tracking-widest font-medium">BARBER SHOP</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-barberGold font-semibold text-sm transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Nosotros</a>
+                <a href="servicios.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Servicios & Tarifas</a>
+                <a href="proyectos.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Portafolio</a>
+                <a href="contacto.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Ubicación y Contacto</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="servicios.html" class="bg-barberGold hover:bg-barberGoldHover text-black font-bold px-5 py-2.5 rounded-full text-sm transition-all shadow-lg shadow-barberGold/20 hover:scale-105">
+                    Reservar Turno
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" aria-label="Abrir menú" class="md:hidden text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-barberCard border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block text-barberGold font-medium py-2 border-b border-white/5">Inicio</a>
+            <a href="nosotros.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Nosotros</a>
+            <a href="servicios.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Servicios & Tarifas</a>
+            <a href="proyectos.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Portafolio</a>
+            <a href="contacto.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Ubicación y Contacto</a>
+            <div class="pt-2">
+                <a href="servicios.html" class="block w-full text-center bg-barberGold text-black font-bold py-3 rounded-full text-sm">Reservar Turno</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-barberDark via-[#171717] to-barberDark">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-barberGold/10 border border-barberGold/30 px-4 py-1.5 rounded-full text-barberGold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>Establecimiento Premium en Itagüí</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                    Estilo profesional a tu alcance: <span class="text-barberGold">Reserva tu turno digital</span> en segundos.
+                </h1>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
+                    Domina tu tiempo con nuestra plataforma mobile-first. Sin filas, sin llamadas de intermediación y con confirmación inmediata vía WhatsApp.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="servicios.html" class="w-full sm:w-auto bg-barberGold hover:bg-barberGoldHover text-black font-extrabold px-8 py-4 rounded-full text-base transition-all shadow-xl shadow-barberGold/20 hover:scale-105 text-center">
+                        Reserva Tu Cita Aquí <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="servicios.html" class="w-full sm:w-auto border border-white/20 hover:border-barberGold text-white hover:text-barberGold font-semibold px-8 py-4 rounded-full text-base transition-all text-center">
+                        Ver Servicios & Tarifas
+                    </a>
+                </div>
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-3 gap-6 pt-10 border-t border-white/10 mt-8">
+                    <div>
+                        <div class="text-3xl font-extrabold text-barberGold">100%</div>
+                        <div class="text-xs text-gray-400 mt-1">Cero Solapamientos</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-barberGold">24/7</div>
+                        <div class="text-xs text-gray-400 mt-1">Agendamiento Online</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-barberGold">90%</div>
+                        <div class="text-xs text-gray-400 mt-1">Optimización Mobile</div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="relative mx-auto max-w-md bg-barberCard border border-white/10 rounded-3xl p-6 shadow-2xl">
+                    <div class="absolute -top-4 -right-4 bg-barberGold text-black font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                        Mobile-First
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 border-b border-white/10 pb-4">
+                            <div class="w-12 h-12 rounded-full bg-barberGold/20 flex items-center justify-center text-barberGold font-bold text-lg">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base">Próxima Disponibilidad</h3>
+                                <p class="text-xs text-gray-400">Selecciona barbero y horario exacto</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="bg-barberDark p-3 rounded-xl border border-white/5 flex items-center justify-between text-sm">
+                                <span>Corte Clásico (30 min)</span>
+                                <span class="text-barberGold font-bold">Seleccionar</span>
+                            </div>
+                            <div class="bg-barberDark p-3 rounded-xl border border-white/5 flex items-center justify-between text-sm">
+                                <span>Perfilado de Barba (20 min)</span>
+                                <span class="text-barberGold font-bold">Seleccionar</span>
+                            </div>
+                            <div class="bg-barberDark p-3 rounded-xl border border-white/5 flex items-center justify-between text-sm">
+                                <span>Combo Gran Batalla (50 min)</span>
+                                <span class="text-barberGold font-bold">Seleccionar</span>
+                            </div>
+                        </div>
+                        <a href="servicios.html" class="block w-full text-center bg-white/10 hover:bg-barberGold hover:text-black font-bold py-3 rounded-xl text-sm transition-all">
+                            Iniciar Reserva Rápida
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Benefits / Differentiation -->
+    <section class="py-20 bg-barberCard/50 border-t border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl sm:text-4xl font-extrabold">¿Por qué elegir La Gran Batalla Barber?</h2>
+                <p class="text-gray-400">Transformamos la experiencia tradicional de barbería en un servicio impecable, rápido y adaptado a tu estilo de vida digital.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-barberCard p-8 rounded-2xl border border-white/10 hover:border-barberGold/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-barberGold/10 text-barberGold flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Agendamiento 24/7</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Olvídate de llamadas telefónicas o esperas en filas físicas. Reserva en segundos desde tu smartphone a cualquier hora del día.</p>
+                </div>
+                <div class="bg-barberCard p-8 rounded-2xl border border-white/10 hover:border-barberGold/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-barberGold/10 text-barberGold flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Recordatorios por WhatsApp</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Recibe confirmación inmediata y alertas automáticas horas antes de tu turno para mantener tu agenda impecable.</p>
+                </div>
+                <div class="bg-barberCard p-8 rounded-2xl border border-white/10 hover:border-barberGold/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-barberGold/10 text-barberGold flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cero Duplicidad de Turnos</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Inventario de tiempos sincronizado en tiempo real. Tu espacio con tu barbero favorito está garantizado al 100%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden text-center bg-gradient-to-r from-barberDark via-[#1E1E1E] to-barberDark border-b border-white/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-extrabold">¿Listo para dominar tu tiempo y tu estilo?</h2>
+            <p class="text-gray-300 max-w-xl mx-auto text-base">Visítanos en la Calle 31B # 45-62, Itagüí, o agenda tu turno en línea ahora mismo.</p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="servicios.html" class="bg-barberGold hover:bg-barberGoldHover text-black font-extrabold px-8 py-4 rounded-full text-base transition-all shadow-xl shadow-barberGold/20 hover:scale-105">
+                    Reservar Cita Online
+                </a>
+                <a href="contacto.html" class="border border-white/20 hover:border-barberGold text-white hover:text-barberGold font-semibold px-8 py-4 rounded-full text-base transition-all">
+                    Ver Ubicación & Contacto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-barberDark border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-barberGold flex items-center justify-center text-black font-bold">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <span class="font-bold text-base tracking-wider uppercase">La Gran Batalla</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed">Establecimiento enfocado en el cuidado masculino y estético de alta calidad en Itagüí, Colombia.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-barberGold transition-colors">Inicio</a></li>
+                    <li><a href="nosotros.html" class="hover:text-barberGold transition-colors">Nosotros</a></li>
+                    <li><a href="servicios.html" class="hover:text-barberGold transition-colors">Servicios & Tarifas</a></li>
+                    <li><a href="contacto.html" class="hover:text-barberGold transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Ubicación</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Calle 31B # 45-62<br>Itagüí, Antioquia, Colombia</p>
+                <p class="text-xs text-barberGold mt-2 font-medium">+57 321 834 79 61</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Canales Digitales</h4>
+                <div class="flex space-x-4">
+                    <a href="https://instagram.com/lagranbatallabarber" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold hover:border-barberGold transition-all">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold hover:border-barberGold transition-all">
+                        <i class="fa-brands fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="https://wa.me/573218347961" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold hover:border-barberGold transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+            <p>&copy; 2026 La Gran Batalla Barber. Todos los derechos reservados.</p>
+            <p class="mt-2 sm:mt-0">Diseñado con excelencia técnica y enfoque Mobile-First.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/573218347961?text=Hola,%20deseo%20más%20información%20sobre%20las%20reservas%20en%20La%20Gran%20Batalla%20Barber" target="_blank" aria-label="WhatsApp Chat" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

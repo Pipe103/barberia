@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | La Gran Batalla Barber</title>
+    <meta name="description" content="Conoce la historia, misión, visión y equipo de profesionales de La Gran Batalla Barber en Itagüí.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        barberDark: '#121212',
+                        barberCard: '#1E1E1E',
+                        barberGold: '#D4AF37',
+                        barberGoldHover: '#C5A028',
+                        barberGray: '#8A8A8A'
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-barberDark text-white font-sans antialiased selection:bg-barberGold selection:text-black">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-barberDark/90 backdrop-blur-md border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-barberGold flex items-center justify-center text-black font-extrabold text-xl group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-wider uppercase">La Gran Batalla</span>
+                    <span class="text-xs text-barberGold tracking-widest font-medium">BARBER SHOP</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-barberGold font-semibold text-sm transition-colors">Nosotros</a>
+                <a href="servicios.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Servicios & Tarifas</a>
+                <a href="proyectos.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Portafolio</a>
+                <a href="contacto.html" class="text-gray-300 hover:text-barberGold font-medium text-sm transition-colors">Ubicación y Contacto</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="servicios.html" class="bg-barberGold hover:bg-barberGoldHover text-black font-bold px-5 py-2.5 rounded-full text-sm transition-all shadow-lg shadow-barberGold/20 hover:scale-105">
+                    Reservar Turno
+                </a>
+            </div>
+            <button id="menu-btn" aria-label="Abrir menú" class="md:hidden text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-barberCard border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Inicio</a>
+            <a href="nosotros.html" class="block text-barberGold font-medium py-2 border-b border-white/5">Nosotros</a>
+            <a href="servicios.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Servicios & Tarifas</a>
+            <a href="proyectos.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Portafolio</a>
+            <a href="contacto.html" class="block text-gray-300 hover:text-barberGold font-medium py-2 border-b border-white/5">Ubicación y Contacto</a>
+            <div class="pt-2"><a href="servicios.html" class="block w-full text-center bg-barberGold text-black font-bold py-3 rounded-full text-sm">Reservar Turno</a></div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-barberDark via-[#1A1A1A] to-barberDark border-b border-white/10 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <span class="text-barberGold text-xs font-bold tracking-widest uppercase bg-barberGold/10 border border-barberGold/30 px-3 py-1 rounded-full">Nuestra Historia & Esencia</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold">Sobre La Gran Batalla</h1>
+            <p class="text-gray-400 text-base max-w-2xl mx-auto">Excelencia en el cuidado masculino y estético de alta calidad en Itagüí, combinando tradición artesanal con innovación digital.</p>
+        </div>
+    </section>
+
+    <!-- Main Content / Story & Vision -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-extrabold">Una nueva era en la estética masculina</h2>
+                <p class="text-gray-300 text-base leading-relaxed">
+                    Ubicados en el corazón de Itagüí (Calle 31B # 45-62), en <strong class="text-barberGold">La Gran Batalla Barber</strong> entendemos que tu tiempo es tan valioso como tu imagen. Venimos de una evolución operativa donde superamos los métodos analógicos tradicionales para ofrecerte una experiencia fluida, puntual y de alto nivel.
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Nuestro equipo está compuesto por expertos apasionados por el estilismo, el corte clásico y moderno, y el perfilado de barba, comprometidos en entregar un servicio impecable en cada visita.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="bg-barberCard p-5 rounded-2xl border border-white/10">
+                        <div class="text-barberGold font-extrabold text-2xl mb-1">Misión</div>
+                        <p class="text-xs text-gray-400">Brindar el más alto estándar en cuidado estético masculino con agilidad digital y atención premium.</p>
+                    </div>
+                    <div class="bg-barberCard p-5 rounded-2xl border border-white/10">
+                        <div class="text-barberGold font-extrabold text-2xl mb-1">Visión</div>
+                        <p class="text-xs text-gray-400">Consolidarnos como la barbería referente en Antioquia gracias a nuestra innovación tecnológica y calidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-barberCard border border-white/10 rounded-3xl p-8 relative overflow-hidden shadow-2xl space-y-6">
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-barberGold/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <h3 class="text-2xl font-bold text-barberGold">Nuestros Valores</h3>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-check text-barberGold mt-1"></i>
+                            <div><strong>Puntualidad Absoluta:</strong> Respetamos tu agenda mediante turnos sincronizados sin solapamientos.</div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-check text-barberGold mt-1"></i>
+                            <div><strong>Sofisticación Técnica:</strong> Maestría en tijera, máquina y perfilado con acabado profesional.</div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-check text-barberGold mt-1"></i>
+                            <div><strong>Innovación Constante:</strong> Ecosistema digital 24/7 con confirmaciones y recordatorios por WhatsApp.</div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-check text-barberGold mt-1"></i>
+                            <div><strong>Atención Premium:</strong> Un ambiente diseñado para tu comodidad y bienestar personal.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Preview -->
+    <section class="py-20 bg-barberCard/30 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl font-extrabold">Nuestro Staff de Profesionales</h2>
+                <p class="text-gray-400">Escoge a tu barbero preferido al momento de realizar tu reserva en línea.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-barberCard border border-white/10 rounded-2xl overflow-hidden text-center p-6 space-y-4 hover:border-barberGold/50 transition-all">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-barberGold/20 border-2 border-barberGold flex items-center justify-center text-barberGold text-3xl font-bold">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Carlos "El Maestro"</h3>
+                    <p class="text-xs text-barberGold uppercase font-semibold">Master Barber</p>
+                    <p class="text-gray-400 text-sm">Especialista en cortes clásicos, navaja tradicional y asesoría de imagen masculina.</p>
+                    <a href="servicios.html" class="inline-block bg-white/10 hover:bg-barberGold hover:text-black font-bold px-4 py-2 rounded-xl text-xs transition-all">Reservar con Carlos</a>
+                </div>
+                <div class="bg-barberCard border border-white/10 rounded-2xl overflow-hidden text-center p-6 space-y-4 hover:border-barberGold/50 transition-all">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-barberGold/20 border-2 border-barberGold flex items-center justify-center text-barberGold text-3xl font-bold">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Santiago Gómez</h3>
+                    <p class="text-xs text-barberGold uppercase font-semibold">Fade & Style Expert</p>
+                    <p class="text-gray-400 text-sm">Experticia en desvanecidos precisos (Fade), diseños modernos y perfilado de barba.</p>
+                    <a href="servicios.html" class="inline-block bg-white/10 hover:bg-barberGold hover:text-black font-bold px-4 py-2 rounded-xl text-xs transition-all">Reservar con Santiago</a>
+                </div>
+                <div class="bg-barberCard border border-white/10 rounded-2xl overflow-hidden text-center p-6 space-y-4 hover:border-barberGold/50 transition-all">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-barberGold/20 border-2 border-barberGold flex items-center justify-center text-barberGold text-3xl font-bold">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Andrés "El Pro"</h3>
+                    <p class="text-xs text-barberGold uppercase font-semibold">Senior Stylist</p>
+                    <p class="text-gray-400 text-sm">Especialista en estilismo integral, barbas texturizadas y rituales de cuidado capilar.</p>
+                    <a href="servicios.html" class="inline-block bg-white/10 hover:bg-barberGold hover:text-black font-bold px-4 py-2 rounded-xl text-xs transition-all">Reservar con Andrés</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-barberDark border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-barberGold flex items-center justify-center text-black font-bold"><i class="fa-solid fa-scissors"></i></div>
+                    <span class="font-bold text-base tracking-wider uppercase">La Gran Batalla</span>
+                </div>
+                <p class="text-xs text-gray-400">Establecimiento enfocado en el cuidado masculino y estético de alta calidad en Itagüí, Colombia.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-barberGold">Inicio</a></li>
+                    <li><a href="nosotros.html" class="hover:text-barberGold">Nosotros</a></li>
+                    <li><a href="servicios.html" class="hover:text-barberGold">Servicios & Tarifas</a></li>
+                    <li><a href="contacto.html" class="hover:text-barberGold">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Ubicación</h4>
+                <p class="text-xs text-gray-400">Calle 31B # 45-62<br>Itagüí, Antioquia, Colombia</p>
+                <p class="text-xs text-barberGold mt-2 font-medium">+57 321 834 79 61</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-barberGold uppercase tracking-wider mb-4">Canales Digitales</h4>
+                <div class="flex space-x-4">
+                    <a href="https://instagram.com/lagranbatallabarber" target="_blank" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold"><i class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                    <a href="https://wa.me/573218347961" target="_blank" class="w-10 h-10 rounded-full bg-barberCard border border-white/10 flex items-center justify-center text-gray-300 hover:text-barberGold"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5 pt-8 text-xs text-gray-500 text-center">
+            &copy; 2026 La Gran Batalla Barber. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
